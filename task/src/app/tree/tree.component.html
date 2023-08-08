@@ -1,0 +1,19 @@
+<!-- <nb-accordion>
+    <nb-accordion-item>
+        <nb-accordion-item-header>Product Details</nb-accordion-item-header>
+        <nb-accordion-item-body>
+            Item Content
+        </nb-accordion-item-body>
+    </nb-accordion-item>
+</nb-accordion> -->
+
+
+
+
+<ul *ngFor="let item of tree.data">
+    <li *ngIf="item.refMenuId">Parent - ({{item.refMenuId}})
+        <ul *ngFor="let childitem of tree.data">
+            <li *ngIf="item.refMenuId===childitem.id">Child - ({{childitem.id}})</li>
+        </ul>
+    </li>
+</ul>
